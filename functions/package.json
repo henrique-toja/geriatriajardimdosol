@@ -1,0 +1,22 @@
+{
+  "name": "henriquetoja-functions",
+  "version": "1.0.0",
+  "description": "Backend functions for Henrique Toja",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "firebase emulators:start --only functions"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.3.2",
+    "@azure-rest/ai-inference": "latest",
+    "@azure/core-auth": "latest",
+    "@azure/core-sse": "latest"
+  },
+  "author": "Henrique Toja",
+  "license": "MIT"
+}
