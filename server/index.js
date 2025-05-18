@@ -1,19 +1,35 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+import * as functions from 'firebase-functions';
+import express from 'express';
+import path from 'path';
+import fs from 'fs';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+dotenv.config();
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+
+// Função para carregar controllers assincronamente
+async function loadControllers() {
+  const controllersPath = path.join(__dirname, 'controllers');
+  const controllerFiles = fs.readdirSync(controllersPath);
+
+  for (const file of controllerFiles) {
+    const { default: controller } = await import(`./controllers/${file}`);
+    if (typeof controller === 'function') {
+      controller(app);
+    }
+  }
+}
+
+// Carrega os controllers antes de exportar a função
+await loadControllers();
+
+// Exporta a função HTTPS para o Firebase
+export const api = functions.https.onRequest(app);

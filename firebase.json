@@ -1,10 +1,10 @@
 {
   "functions": {
     "runtime": "nodejs22",
-    "source": "functions"
+    "source": "server"
   },
   "hosting": {
-    "public": "functions/public",
+    "public": "server/public",
     "ignore": [
       "firebase.json",
       "**/.*",
