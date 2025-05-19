@@ -14,15 +14,5 @@ fbq('track', 'PageView');
 (function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","n1KtVCoHGEyvTCCNhhJf9P6p3")
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const whatsappNumber = '555197879151';
-  const mensagem = encodeURIComponent('Olá! Gostaria de saber mais sobre a Geriatria.');
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
 
-  document.querySelectorAll('.whatsapp-btn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.open(whatsappLink, '_blank');
-    });
-  });
-});
+  gtag('event', 'conversion', {'send_to': 'AW-635257063/6qEnCMHknd0BEOeB9a4C'});
