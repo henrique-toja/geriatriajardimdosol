@@ -15,18 +15,14 @@ fbq('track', 'PageView');
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Defina o número do WhatsApp uma única vez:
-  const whatsappNumber = '555197879151'; // só números, com DDI e DDD
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const whatsappNumber = '555197879151';
+  const mensagem = encodeURIComponent('Olá! Gostaria de saber mais sobre a Geriatria.');
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
 
-  // Seleciona todos os botões com a classe
   document.querySelectorAll('.whatsapp-btn').forEach(function(btn) {
-    btn.setAttribute('href', whatsappLink);
-    // Se quiser garantir o target e rel:
-    btn.setAttribute('target', '_blank');
-    btn.setAttribute('rel', 'noopener');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open(whatsappLink, '_blank');
+    });
   });
 });
-
-const mensagem = encodeURIComponent('Olá! Gostaria de saber mais sobre o Jardim do Sol Geriatria.');
-const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
