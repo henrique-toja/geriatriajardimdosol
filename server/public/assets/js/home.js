@@ -76,3 +76,21 @@ servicesPrev.addEventListener('click', () => {
 });
 
 updateServiceCarousel();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('sobreVideo');
+  if (video) {
+    let loaded = false;
+    video.addEventListener('play', function onPlay() {
+      if (!loaded) {
+        const source = document.createElement('source');
+        source.src = 'assets/images/jardimdosol.mp4';
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        video.load();
+        loaded = true;
+        video.play();
+      }
+    }, { once: true });
+  }
+});
