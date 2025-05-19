@@ -12,3 +12,21 @@ fbq('track', 'PageView');
 
 // Leads -----------------------------
 (function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","n1KtVCoHGEyvTCCNhhJf9P6p3")
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Defina o número do WhatsApp uma única vez:
+  const whatsappNumber = '555197879151'; // só números, com DDI e DDD
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
+  // Seleciona todos os botões com a classe
+  document.querySelectorAll('.whatsapp-btn').forEach(function(btn) {
+    btn.setAttribute('href', whatsappLink);
+    // Se quiser garantir o target e rel:
+    btn.setAttribute('target', '_blank');
+    btn.setAttribute('rel', 'noopener');
+  });
+});
+
+const mensagem = encodeURIComponent('Olá! Gostaria de saber mais sobre o Jardim do Sol Geriatria.');
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensagem}`;
