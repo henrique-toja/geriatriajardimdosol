@@ -18,9 +18,9 @@
 
     let frequencia = 'semestral';
     const quartos = [
-      { cod: "q3", label: "Quarto Triplo", img: "quarto3.jpg" },
-      { cod: "q2", label: "Quarto Duplo", img: "quarto2.jpg" },
-      { cod: "q1", label: "Quarto Individual", img: "quarto1.jpg" }
+      { cod: "q3", label: "Quarto Triplo", img: "/assets/images/quarto3.jpg" },
+      { cod: "q2", label: "Quarto Duplo", img: "/assets/images/quarto2.jpg" },
+      { cod: "q1", label: "Quarto Individual", img: "/assets/images/quarto1.jpg" }
     ];
     const niveisResumo = [
       {
