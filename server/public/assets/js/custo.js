@@ -64,7 +64,7 @@
         const mesesPlano = mesesPorPlano[frequencia];
         const precoTotal = Math.round(precoMensal * mesesPlano);
         const perfil = niveisResumo[nivel - 1];
-        const mensagem = `Olá! Gostaria de avançar na contratação para meu familiar.
+        const mensagem = `Olá! Gostaria de saber mais sobre os preços
 Quarto: ${quarto.label}
 Perfil: ${perfil.titulo}
 ${perfil.descricao}
@@ -89,7 +89,7 @@ Por favor, envie orientações sobre os próximos passos.`;
               * sujeito a alterações
             </span>
           </div>
-          <a href="${linkWhats}" class="btn-primary" target="_blank">Conversar no WhatsApp</a>
+          <a href="${linkWhats}" class="btn-primary" target="_blank">Chamar no WhatsApp</a>
         `;
         carouselTrack.appendChild(card);
       });
