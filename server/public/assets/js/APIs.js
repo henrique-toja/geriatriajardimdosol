@@ -1,4 +1,4 @@
-// Facebook Pixel (Meta Pixel) -----------------------------
+
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -10,8 +10,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1729771167889310');
 fbq('track', 'PageView');
 
-// Leads -----------------------------
-(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","n1KtVCoHGEyvTCCNhhJf9P6p3")
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ET9GB36ZV3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ET9GB36ZV3');
 
 
 
