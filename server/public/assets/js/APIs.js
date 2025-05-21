@@ -139,3 +139,22 @@ window.addEventListener('DOMContentLoaded', function () {
     // ignora erro
   }
 });
+
+// ----------- Extensão: Link para Política de Privacidade -----------
+
+window.addEventListener('DOMContentLoaded', function () {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const privacyLink = document.createElement('a');
+  privacyLink.href = '/politica-de-privacidade.html'; // Altere conforme necessário
+  privacyLink.target = '_blank';
+  privacyLink.textContent = 'Política de Privacidade';
+  privacyLink.style.display = 'block';
+  privacyLink.style.textAlign = 'center';
+  privacyLink.style.marginTop = '10px';
+  privacyLink.style.fontSize = '14px';
+  privacyLink.style.color = '#fff'; // Ajuste ao seu tema
+
+  banner.appendChild(privacyLink);
+});
