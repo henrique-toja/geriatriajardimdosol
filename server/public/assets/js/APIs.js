@@ -45,13 +45,13 @@ function loadGoogleAnalyticsAndAds() {
   }
 
   const consentHTML = `
-    <div class="consent-main">
-      <span class="consent-text">
-        Para uma experiência incrível neste site, usamos cookies para personalizar conteúdos e analisar o tráfego. <a href="/politica-de-privacidade" target="_blank">Saiba mais</a>.
-      </span>
       <div class="consent-actions">
         <button class="consent-btn consent-btn-ok" id="consent-ok">OK</button>
         <button class="consent-btn consent-btn-custom" id="consent-custom">Definir cookies</button>
+    <div class="consent-main">
+      <span class="consent-text">
+        Este site, utiliza cookies para otimizar e personalizar a experiência de navegação, ao clicar em OK, você concorda com os termos da Lei Geral de Proteção de Dados(LGPD)<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank">Saiba mais</a>.
+      </span>
       </div>
     </div>
     <div class="consent-settings" id="cookie-settings" style="display: none;">
