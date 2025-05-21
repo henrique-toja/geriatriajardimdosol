@@ -788,3 +788,88 @@ padding-top: 1rem;
   background: #128C7E;
   transform: scale(1.08);
 }
+
+/* consent.css */
+
+.consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+
+.consent-main,
+.consent-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.consent-text a {
+  color: #00f;
+  text-decoration: underline;
+}
+
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.consent-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.consent-btn-ok {
+  background-color: #0c0;
+  color: #000;
+}
+
+.consent-btn-ok:hover {
+  background-color: #0a0;
+}
+
+.consent-btn-custom,
+.consent-btn-back {
+  background-color: #555;
+  color: #fff;
+}
+
+.consent-btn-custom:hover,
+.consent-btn-back:hover {
+  background-color: #777;
+}
+
+.consent-btn-save {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.consent-btn-save:hover {
+  background-color: #0056b3;
+}
+
+.consent-settings h3 {
+  margin-bottom: 8px;
+}
+
+.consent-settings label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
